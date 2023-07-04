@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,600;1,200;1,300;1,600&family=Prompt:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Kurniawan | Project</title>
+    <style>
+        :root {
+            --tempel: #b28b67;
+        }
+
+        * {
+            font-family: 'poppins', sans-serif;
+            padding: 0px;
+            margin: 0px;
+            color: white;
+            background-color: #323030;
+            text-decoration: none;
+        }
+
+        .navbar {
+            width: 80%;
+            display: flex;
+            font-size: 1.6rem;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 10%;
+            border-bottom: 3px solid #fff;
+            position: sticky;
+        }
+
+        .navbar .navbar-logo {
+            width: 3rem;
+        }
+
+        .navbar .navbar-nav a {
+            color: #fff;
+        }
+
+        .navbar .navbar-nav span {
+            color: var(--tempel);
+            font-weight: 600;
+        }
+
+        /* bagian 1 */
+        .container {
+            padding: 2rem;
+        }
+
+        .bawah {
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333;
+            height: 60px;
+        }
+
+        .navbar a .perintah {
+            font-size: 8rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .grid-item {
+            border: 1px solid #ccc;
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-image {
+            width: 15rem;
+            height: 100%;
+            object-fit: cover;
+            margin-right: 10px;
+            border: 2px solid rgb(105, 173, 255);
+
+        }
+
+        .card-content {
+            flex-grow: 1;
+        }
+        i b{
+            color: rgb(119, 119, 255);
+        }
+        .card-title {
+            font-size: 18px;
+            margin: 0;
+        }
+
+        .card-description {
+            margin: 5px 0;
+            font-size: 1.2rem;
+            text-align: left;
+        }
+
+        /* media queries */
+
+        /* laptop */
+        @media (max-width: 1366px) {
+            html {
+                font-size: 75%;
+            }
+
+            .card {
+                display: block;
+            }
+
+            .bawah {
+                position: sticky;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+            }
+
+        }
+
+        /* tablet */
+        @media (max-width: 900px) {
+            html {
+                font-size: 60%;
+            }
+
+            .navbar {
+                width: 80%;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .container {
+                padding: 0px;
+                width: 100%;
+                padding-left: 10%;
+                padding-top: 2rem;
+            }
+
+            .grid-container {
+                display: block;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+
+            .grid-item {
+                border: 1px solid #ccc;
+                background-color: #333;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .card {
+                display: flex;
+                align-items: center;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                padding: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card-image {
+                width: 15rem;
+                height: 100%;
+                object-fit: cover;
+                margin-right: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .card-content {
+                flex-grow: 1;
+            }
+
+            .card-title {
+                font-size: 18px;
+                margin: 0;
+            }
+
+            .card-description {
+                margin: 5px 0;
+                font-size: 1.05rem;
+                text-align: left;
+            }
+
+        }
+
+        /* Hp */
+        @media (max-width: 450px) {
+            html {
+                font-size: 55%;
+            }
+
+            .navbar {
+                width: 80%;
+            }
+
+            .container {
+                padding: 0px;
+                width: 100%;
+            }
+        }
+
+        /* mini */
+        @media (max-width: 280px) {
+            html {
+                font-size: 55%;
+            }
+
+            .navbar {
+                width: 80%;
+            }
+
+            .container {
+                padding: 0px;
+                width: 100%;
+            }
+
+            .card {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar awal -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img class="navbar-logo" src="assets/css.png">
+        </div>
+        <div class="navbar-nav">
+            <a href="index.html">
+                Kurnia<span>Wan</span>.
+            </a>
+        </div>
+        <div class="navbar-extra">
+            <a href="#">
+                <i data-feather="menu" id="menu"></i>
+            </a>
+        </div>
+    </nav>
+    <!-- navbar akhir -->
+
+    <!-- bagian 1 -->
+    <div class="container">
+        <div class="grid-container">
+            <div class="grid-item">
+                <div class="card">
+                    <img src="assets/wisata.PNG" alt="Gambar" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Wisata Bali</h2>
+                        <p class="card-description">Tugas ini merupakan tugas yang saya dan 3 anggota kelompok kerjakan.
+                            ita ditugaskan untuk membuat/meniru web wisata.kebetulan kami mendapatkan bagian wisata
+                            Bali.kami semua(saya) mengerjakan tugas ini selama 1 minggu.Saya menggukanan
+                            <i><b>Bootstrap</b> dan <b>css </b></i>untuk mengerjakan ini
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="card">
+                    <img src="assets/form-action.PNG" alt="Gambar" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Form Action</h2>
+                        <p class="card-description">Tugas ini termasuk tugas kelompok.Tetapi ada beberapa murid lebih
+                            memilih untuk mengerjakannya sendiri. Kita ditugaskan untuk membuat daftar menu. Untuk
+                            membuat
+                            ini harus menggunakan 2 halaman yaitu halaman tampilan untuk hasil dan halaman form untuk
+                            mengisi menu. Saya mengerjakan ini full <i><b>Bootstrap</b></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- baris ke-2 -->
+        <div class="grid-container">
+            <div class="grid-item">
+                <div class="card">
+                    <img src="assets/tokoijo.PNG" alt="Gambar" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Cloning</h2>
+                        <p class="card-description">Saya membuat cloningan web dari toko ijo. Untuk membuat sepert ini
+                            tidaklah terlalu sulit.Karena saya meyelesaikannya hanya kurang dari 30 menit.Hal yang
+                            membuat agak lama yaitu mengepaskan jarak antar columns.Saya mengerjakan ini dengan full
+                            <i><b>Bootstrap</b></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="card">
+                    <img src="assets/hm-mart.PNG" alt="Gambar" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Web Kasir</h2>
+                        <p class="card-description">Tugas yang termasuk sulit. Saya mengerjakan ini selama 1 Minggu.
+                            Yang harus dilakukan adalah menyambungkan inputan ke database. Jika berhasil maka inputan
+                            akan muncul pada halaman. Bagian yang sulit adalah rumus untuk menentukan jumlah barang
+                            keseluruhan. Saya mengerjakan ini dengan <i><b>Bootstrap, PHP</b> dan <b>SQL</b></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- baris ke-3 -->
+        <div class="grid-container">
+            <div class="grid-item">
+                <div class="card">
+                    <img src="assets/sql.PNG" alt="Gambar" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Perpustakaan</h2>
+                        <p class="card-description">Hampir sama dengan sebelumnya. Web ini disambungakan di database
+                            terlebih dahulu. selanjutunya membuat tabel di command promp menggukanan bahasa
+                            <i><b>SQL</b></i>. Saya membutuhkan waktu 1-2 minggu untuk menyelesaikannya. Sama juga
+                            menggunakan <i><b>Bootstrap, PHP</b> dan <b>SQL</b></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-item">
+                <div class="card">
+                    <img src="assets/profile.PNG" alt="Gambar" class="card-image">
+                    <div class="card-content">
+                        <h2 class="card-title">Profile</h2>
+                        <p class="card-description">Berawalan gabut karena di rumah gak ngapa ngapain akhirny sedikit
+                            bermain <i><b>CSS </b></i>. Awalnya hanya ingin membuat tampilan profile tetapi malah
+                            kebablasan sampai membuat halaman ini. Saya membuat ini dengan waktu sekitar 3 hari.Saya
+                            menggunakan full <i><b>CSS</b></i>  untuk membuat halaman ini</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <nav class="bawah">
+        <a href="#"><i class="perintah" data-feather="dribbble" id="bola"></i></a>
+        <a href="#"><i class="perintah" data-feather="command" id="rank"></i></a>
+        <a href="#"><i class="perintah" data-feather="cpu" id="chip"></i></a>
+    </nav>
+    <script>
+
+        // feather icons
+        feather.replace()
+
+        // JS burger menu
+        document.getElementById("menu").addEventListener("click", function () {
+            alert("Penak e tombol iki dikei opo?");
+        });
+
+        // JS CLub
+        document.getElementById("bola").addEventListener("click", function () {
+            alert("Real Madid");
+        });
+
+        // JS rank
+        document.getElementById("rank").addEventListener("click", function () {
+            alert("Mythic 35");
+        });
+
+        // JS chip
+        document.getElementById("chip").addEventListener("click", function () {
+            alert("Helio G99");
+        });
+
+    </script>
+</body>
+
+</html>
